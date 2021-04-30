@@ -10,6 +10,8 @@ class HomeView extends StatelessWidget {
   TextEditingController textController = TextEditingController(text: "\$0");
   @override
   Widget build(BuildContext context) {
+    var aspectRatio = MediaQuery.of(context).size.aspectRatio;
+    // print(height);
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0.0,
@@ -46,7 +48,7 @@ class HomeView extends StatelessWidget {
                 padding: EdgeInsets.only(top: 25.0),
                 shrinkWrap: true,
                 gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3),
+                    childAspectRatio: aspectRatio * 3, crossAxisCount: 3),
                 itemCount: KeyValueModel.keys.length,
                 itemBuilder: (BuildContext ctx, index) {
                   return KeyPad(
@@ -72,8 +74,9 @@ class HomeView extends StatelessWidget {
                   );
                 }),
           ),
+
           Padding(
-            padding: const EdgeInsets.all(40.0),
+            padding: const EdgeInsets.all(20.0),
             child: Row(
               children: [
                 TransactionTypeContainer(

@@ -10,6 +10,7 @@ class TransactionTypeContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
+        height: 46,
         margin: EdgeInsets.only(left: marginLeft),
         padding: EdgeInsets.all(10.0),
         child: Text(
@@ -17,8 +18,7 @@ class TransactionTypeContainer extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         decoration: BoxDecoration(
-          // color: Colors.black,
-          color: Color(0xffF9F9F9),
+          color: Colors.grey[100],
           borderRadius: BorderRadius.circular(30.0),
         ),
       ),
