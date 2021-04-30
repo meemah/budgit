@@ -1,5 +1,5 @@
 # accelerhealth/budgit
 
 Screenshots of the home screen default and when keypad is tapped
-![](screenshots/screenshot1.png)
-![](screenshots/screenshot2.png)
+![](screenshot/screenshot1.png)
+![](screenshot/screenshot2.png)
